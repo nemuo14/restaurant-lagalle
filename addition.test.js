@@ -1,4 +1,4 @@
-const { calculerAddition } = require('./addition');
+const { calculerAddition , appliquerReduction } = require('./addition');
 // describe('calculerAddition', () => {
 //     test('should return 20 when adding 15 and 5', () => {
 //         expect(calculerAddition(15, 5)).toBe(20);
@@ -6,4 +6,8 @@ const { calculerAddition } = require('./addition');
 
 test('calculerAddition', () => {
         expect(calculerAddition(15, 5)).toBe(20);
+    });
+
+test('appliquerReduction', () => {
+    expect(appliquerReduction(100, 10)).toBe(90);
     });
