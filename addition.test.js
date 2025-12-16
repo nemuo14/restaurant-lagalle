@@ -7,3 +7,11 @@ const { calculerAddition } = require('./addition');
 test('calculerAddition', () => {
         expect(calculerAddition(15, 5)).toBe(20);
     })
+
+test('calculerAddition', () => {
+        expect(calculerAddition(10, 5)).toBe(15);
+    })
+
+test('calculerAddition', () => {
+        expect(calculerAddition(5, 5)).toBe(10);
+    })
