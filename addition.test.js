@@ -5,5 +5,5 @@ const { calculerAddition } = require('./addition');
 //     })})
 
 test('calculerAddition', () => {
-        expect(calculerAddition(10, 5)).toBe(20);
+        expect(calculerAddition(15, 5)).toBe(20);
     });
