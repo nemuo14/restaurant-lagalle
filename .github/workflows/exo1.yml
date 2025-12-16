@@ -15,9 +15,8 @@ jobs:
       uses: actions/checkout@v4
 
     - name: print
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
+      run: echo "Le restaurant est ouvert !"
+ 
 
 
 
