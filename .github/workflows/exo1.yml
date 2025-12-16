@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    run-on: ubuntu-lastest
+    run-on: ubuntu-latest
 
     steps:
     - name: Recuperer le code
