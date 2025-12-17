@@ -52,3 +52,9 @@ jobs:
               run: |
                 curl --fail https://${{secrets.USERNAME}}.github.io/${{secrets.REPO_NAME}} || exit 1
                 echo "Le restaurant est ouvert !"
+            - name: Notifier le succès
+              if: success()
+              run: echo "Déploiement réussi !" #Un mail peut être envoyé, à vous de choisir !
+            - name: Notifier l'échec
+              if: failure()
+              run: echo " Déploiement échoué !"
