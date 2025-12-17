@@ -8,7 +8,7 @@ permissions:
     id-token: write
 jobs:
     test:
-        runs-on: ubuntu-lates
+        runs-on: ubuntu-latest
 
         steps:
             - name: Recuperer le code
