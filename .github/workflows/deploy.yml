@@ -54,7 +54,19 @@ jobs:
                 echo "Le restaurant est ouvert !"
             - name: Notifier le succès
               if: success()
-              run: echo "Déploiement réussi !" #Un mail peut être envoyé, à vous de choisir !
+              run: |
+                echo "✅ Déploiement réussi !"
+                echo "URL du site      : ${{ steps.deployment.outputs.page_url }}"
+                echo "Date du déploiement : $(date)"
+                echo "Déployé par      : ${{ github.actor }}"
+                echo "Commit SHA       : ${{ github.sha }}"
+                echo "Message du commit: ${{ github.event.head_commit.message }}"
+                echo "Branche          : ${{ github.head_ref || github.ref_name }}"
+
             - name: Notifier l'échec
               if: failure()
-              run: echo " Déploiement échoué !"
+              run: |
+                echo "❌ Déploiement échoué !"
+                echo "Déployé par      : ${{ github.actor }}"
+                echo "Commit SHA       : ${{ github.sha }}"
+                echo "Branche          : ${{ github.head_ref || github.ref_name }}"
