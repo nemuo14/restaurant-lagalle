@@ -46,3 +46,9 @@ jobs:
             - name: Déployer sur GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4
+            - name: Attendre que le site soit prêt
+              run: sleep 30
+            - name: Vérifier que le site répond
+              run: |
+                curl --fail https://{{secrets.USERNAME}}.github.io/{{secrets.REPO_NAME}} || exit 1
+                echo "Le restaurant est ouvert !"
