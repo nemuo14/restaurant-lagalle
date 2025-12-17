@@ -3,7 +3,7 @@ function calculerAddition(prixPlat, prixBoisson){
 }
 
 function appliquerReduction(total, pourcentage){
-    return total*pourcentage/100;
+    return total*(100-pourcentage)/100;
 }
 
 module.exports = { calculerAddition, appliquerReduction }
